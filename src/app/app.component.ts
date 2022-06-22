@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {FormControl} from "@angular/forms";
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-material-test';
+  myControl = new FormControl();
+  options:string[] = ['jack','ross','T800']
 }
