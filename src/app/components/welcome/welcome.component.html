@@ -1,0 +1,38 @@
+<!--顶部工具栏-->
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="menu.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<!--侧边导航栏-->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #menu opened mode="side">
+    <mat-action-list>
+      <button mat-list-item *ngFor="let link of links">{{ link }}</button>
+    </mat-action-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-tab-group>
+      <mat-tab label="c1">c1</mat-tab>
+      <mat-tab label="c2">c2</mat-tab>
+      <mat-tab label="c3">c3</mat-tab>
+      <router-outlet></router-outlet>
+    </mat-tab-group>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+<!--<button mat-flat-button color="primary" type="button" (click)="openDialog()">打开登录界面</button>-->
+

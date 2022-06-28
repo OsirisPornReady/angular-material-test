@@ -1,0 +1,8 @@
+<mat-grid-list cols="8" rowHeight="500px" gutterSize="10px">
+  <mat-grid-tile *ngFor="let video of videos;let i = index" (click)="getVideoDetail()">
+    <div>
+      <img style="display: block" [src]=video.thumbnail>
+      <p style="display: block">{{video.title}}</p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
